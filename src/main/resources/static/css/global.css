@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;900&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+body{
+	overflow: hidden;
+	margin-left: 2rem;
+	background: #181B21;
+	font-family: Montserrat;
+	color: #FFF;
+}
+
+a{
+	text-decoration: none;
+	color: #FFF;
+}
+
+li{
+	list-style: none;
+}
+
+header{
+	display: flex;
+	justify-content: space-between;
+}
+
+header a{
+	color: var(--primary);
+}
+
+header .login-info{
+	display:flex;
+	align-items: center;
+	margin: 1rem;	
+}
+
+header .login-info .avatar{
+	margin: 0 1rem;
+}
+
+h1{
+	font-weight: 900;
+	font-size: 3rem;
+	color: #A650FF;
+	text-shadow: 0px 0px 15px #A650FF;
+}
+
+.card{
+	background: linear-gradient(145.91deg, #33393E 0%, #17191A 100%);
+	box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.5);
+	border-radius: 30px;
+	padding: 1rem;
+	margin: 2rem;
+}
+
+.card.form{
+	max-width: 450px;
+	margin: 3rem auto;
+}
+
+.card h2{
+	font-weight: 600;
+	font-size: 1.5rem;
+	text-align: center;
+	color: #FFFFFF;
+}
+
+button,
+.button{
+	display: flex;
+	background: #25282B;
+	box-shadow: -2px -2px 4px rgba(98, 97, 97, 0.25), 2px 2px 4px #161616;
+	border-radius: 7px;
+	font-family: Montserrat;
+	font-size: 1.2rem;
+	text-align: center;
+	color: #A0A0A0;
+	padding: .4rem 2rem;
+	cursor: pointer;
+}
+
+button.primary,
+.button.primary{
+	background: #A650FF;
+	box-shadow: 0px 0px 7px #A650FF;
+	color: #4D2478;
+}
+
+button.icon,
+.button.icon {
+    padding: .5rem;
+}
+
+.action {
+	width: 170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.alert {
+    margin: 0 auto;
+    max-width: 300px;
+    padding: 1rem;
+    background: linear-gradient(147.57deg, rgba(0, 255, 102, 0.6) 0%, rgba(0, 255, 102, 0.06) 100%);
+    backdrop-filter: blur(61px);
+    border-radius: 10px;
+}
+
+.alert.error{
+	background: linear-gradient(147.57deg, rgba(255, 0, 102, 0.6) 0%, rgba(255, 0, 102, 0.06) 100%);  
+}
+
+.avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+}
+
+
+
+
+
+
+

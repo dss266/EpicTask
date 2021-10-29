@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head th:include="_template :: head"></head>
+
+<body>
+
+	<header th:include="_template :: header"></header>
+	
+	<div class="card form">
+		<h2 th:text="#{button.newtask}">Nova Tarefa</h2>
+		
+		<form class="form-vertical" action="/task" method="post" th:object="${task}">
+			<label class="hide" for="title">Título</label>
+			<input 
+				th:classappend="${#fields.hasErrors('title')}?invalid"
+				type="text" 
+				id="title" 
+				name="title" 
+				th:field="*{title}" 
+				placeholder="título"
+			>
+			<span th:errors="*{title}"></span>
+			
+			<label class="hide" for="description">Descrição</label>
+			<textarea 
+				name="description" 
+				id="description" 
+				rows="" 
+				cols="" 
+				th:field="*{description}" 
+				placeholder="descrição"
+				th:classappend="${#fields.hasErrors('description')}?invalid"
+				></textarea>
+			<span th:errors="*{description}"></span>
+			
+			<label for="points">Pontos</label>
+			<input 
+			
+				name="points" 
+				id="points" 
+				type="range" 
+				th:field="*{points}"
+				min=10
+				max=500
+				step=10
+				oninput="document.querySelector('#output-points').value=this.value"
+				>
+			<output id="output-points">10</output>
+			<span th:errors="*{points}"></span>
+			
+			
+			<div class="action-buttons">
+				<a class="button" href="/task">Cancelar</a>
+				<button class="primary">Salvar</button>
+			</div>
+		</form>
+	</div>
+	
+	
+
+</body>
+</html>
